@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Byu-0T-zDu">
+    <device id="retina4_0" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="6X8-4b-2bA">
+            <objects>
+                <viewController title="Main View Controller" id="Byu-0T-zDu" customClass="ViewController" customModule="bochs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tba-O5-4rh"/>
+                        <viewControllerLayoutGuide type="bottom" id="gjm-dv-aL9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="diO-cB-RMK">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pumpkins" translatesAutoresizingMaskIntoConstraints="NO" id="Dkc-02-ZIQ">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyN-lK-PLr">
+                                <rect key="frame" x="5" y="285" width="66" height="30"/>
+                                <state key="normal" title="Keyboard"/>
+                                <connections>
+                                    <action selector="key:" destination="Byu-0T-zDu" eventType="touchUpInside" id="UpA-On-eBB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yyN-lK-PLr" firstAttribute="leading" secondItem="diO-cB-RMK" secondAttribute="leading" constant="5" id="6ru-PO-LOm"/>
+                            <constraint firstItem="Dkc-02-ZIQ" firstAttribute="top" secondItem="diO-cB-RMK" secondAttribute="top" id="SUh-cQ-vZw"/>
+                            <constraint firstAttribute="trailing" secondItem="Dkc-02-ZIQ" secondAttribute="trailing" id="Xry-rp-v6c"/>
+                            <constraint firstItem="Dkc-02-ZIQ" firstAttribute="leading" secondItem="diO-cB-RMK" secondAttribute="leading" id="f1Z-7W-Xzq"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="yyN-lK-PLr" secondAttribute="bottom" constant="5" id="fcc-bB-3JW"/>
+                            <constraint firstItem="Dkc-02-ZIQ" firstAttribute="bottom" secondItem="gjm-dv-aL9" secondAttribute="top" id="mIa-5U-Iwy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="screenview" destination="Dkc-02-ZIQ" id="Mlo-rL-SWz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Qb-FM-RIy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.52112676056338" y="260.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pumpkins" width="577" height="384"/>
+    </resources>
+</document>
